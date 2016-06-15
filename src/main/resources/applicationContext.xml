@@ -4,16 +4,16 @@
 	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="
  http://www.springframework.org/schema/beans
- http://www.springframework.org/schema/spring-beans-4.2.xsd
- http://www.springframework.org/shcema/context
- http://www.springframework.org/schema/spring-context-4.2.xsd
+ http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context-4.2.xsd
  http://www.springframework.org/schema/tx
- http://www.springframework.org/schema/spring-tx-4.2.xsd
+ http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
  http://www.springframework.org/schema/aop
- http://www.springframework.org/shcema/spring-aop-4.2.xsd"
+ http://www.springframework.org/shcema/aop/spring-aop-4.2.xsd"
 	default-lazy-init="true">
 
-	<context:annotation-config />
+<!-- 	<context:annotation-config />
 	<context:component-scan base-package="net.**.service" />
 	<context:property-placeholder location="classpath*:/config.properties" />
 	<beans profile="test">
@@ -27,5 +27,5 @@
 	<beans profile="prod">
 		<context:property-placeholder location="classpath*:/config_prod.properties"
 			ignore-unresolvable="true" />
-	</beans>
+	</beans> -->
 </beans>
