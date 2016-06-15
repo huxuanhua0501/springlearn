@@ -1,1 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mv"
+	xsi:schemaLocation="
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/sring-context-4.2.xsd
+ http://www.springframework.org/schema/mv
+ http://www.springframework.org/schema/spring-mv-4.2.xsd
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/spring-beans-4.2.xsd"
+	default-lasy-init="true">
+<context:component-scan base-package="net.**.controller" use-default-filters="false">
+ <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+</context:component-scan>
+<!-- jsp配置 -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  <property name="prefix" value="/WEB-INF/"/>
+  <property name="suffix" value=".jsp"/>
+</bean>
+
+</beans>
+	
