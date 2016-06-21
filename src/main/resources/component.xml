@@ -14,7 +14,4 @@
  http://www.springframework.org/schema/aop
  http://www.springframework.org/shcema/aop/spring-aop-4.2.xsd"
 	default-lazy-init="true">
-
-	<import resource="activeMq.xml" />
-
-</beans>
+	</beans>
