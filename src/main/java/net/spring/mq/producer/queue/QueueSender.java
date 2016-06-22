@@ -18,7 +18,7 @@ public class QueueSender {
 	private JmsTemplate jmsTemplate;
 
 	public void send( String Name, final String message) {
-        jmsTemplate.send(new MessageCreator() {
+        jmsTemplate.send(Name,new MessageCreator() {
 			
 			@Override
 			public Message createMessage(Session session) throws JMSException {

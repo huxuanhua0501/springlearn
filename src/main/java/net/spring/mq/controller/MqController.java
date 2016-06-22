@@ -18,7 +18,7 @@ public class MqController {
 	
 	
 	
-	@RequestMapping(value = "queueSender", method={RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value = "/queueSender", method={RequestMethod.GET,RequestMethod.POST})
 	public String sendQueue(String message){
 		String opt="";
 		try {
@@ -31,7 +31,7 @@ public class MqController {
 	}
 	
 
-	@RequestMapping(value="topicSender", method={RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value="/topicSender", method={RequestMethod.GET,RequestMethod.POST})
 	public String topicSender(@RequestParam("message")String message){
 		String opt="";
 		try {

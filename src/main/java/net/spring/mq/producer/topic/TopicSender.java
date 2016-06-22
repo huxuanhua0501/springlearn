@@ -17,7 +17,7 @@ public class TopicSender {
 	@Qualifier("jmsTopicTemplate")
 	private JmsTemplate jmsTemplate;
 	public void send( String name, final String message){
-		jmsTemplate.send(new MessageCreator(){
+		jmsTemplate.send(name,new MessageCreator(){
 			@Override
 			public Message createMessage(Session session) throws JMSException {
 				// TODO Auto-generated method stub
