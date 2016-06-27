@@ -16,5 +16,4 @@
 	default-lazy-init="true">
 
 	<import resource="activeMq.xml" />
-
 </beans>
