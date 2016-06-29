@@ -17,12 +17,12 @@ public class MongoTest {
 	@Autowired
 	private ILogTestSerice logTestService;
 	
-//	
+	
 //	@Test
 //	public void insert() {
 // 
 //		String testName = "你妹";
-//		logTestSerice.saveLogTest(testName);
+//		logTestService.saveLogTest(testName);
 //	}
 	@Test
 	public void get() {
