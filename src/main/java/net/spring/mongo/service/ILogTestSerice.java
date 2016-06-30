@@ -9,5 +9,6 @@ public interface ILogTestSerice {
 	public void saveLogTest(String testName);
 	public LogTest find(String testName);
 	public List<LogTest> findR(String name);
+	public LogTest findS();
 
 }

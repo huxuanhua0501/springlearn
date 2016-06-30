@@ -59,11 +59,15 @@ public class LogTestService implements ILogTestSerice {
 
 
 	@Override
-	public LogTest find(String testName) {
+	public LogTest findS() {
 		// TODO Auto-generated method stub
 		Query query = new Query();
-		query.addCriteria(Criteria.where("name").is("test"));
-		List<LogTest>list = mongoTemplate.find(query, LogTest.class);
+		//query.addCriteria(Criteria.where("name").is("test"));
+//		List<LogTest>list = mongoTemplate.find(query, LogTest.class);
+		List<LogTest>list =mongoTemplate.findAll(LogTest.class);
+		for(LogTest log:list){
+			System.out.println(log.getName());
+		}
 		return list.get(0);
 	}
 	
@@ -72,4 +76,14 @@ public class LogTestService implements ILogTestSerice {
 //		return null;
 	 return	respositoryservice.findAll();
 	}
+
+
+	@Override
+	public LogTest find(String testName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+ 
 }

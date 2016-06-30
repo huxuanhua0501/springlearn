@@ -47,6 +47,15 @@ public class MongoTest {
 	
 	
 	
+	@Test
+	public void getRF() {
+ 
+		 
+		 logTestService.findS();
+		 
+	}	
+	
+	
 //	@Test
 //	public void tt(){
 //		System.err.println("sfsf");
