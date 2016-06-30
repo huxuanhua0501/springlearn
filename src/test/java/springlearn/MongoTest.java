@@ -2,6 +2,8 @@ package springlearn;
 
 
  
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,14 +26,26 @@ public class MongoTest {
 //		String testName = "你妹";
 //		logTestService.saveLogTest(testName);
 //	}
+//	@Test
+//	public void get() {
+// 
+//		String testName = "test";
+//		LogTest log = new LogTest();
+//		log = logTestService.find(testName);
+//		System.out.println(log.getName()+"  "+log.getPassword());
+//	}
+	
 	@Test
-	public void get() {
+	public void getR() {
  
-		String testName = "test";
-		LogTest log = new LogTest();
-		log = logTestService.find(testName);
-		System.out.println(log.getName()+"  "+log.getPassword());
-	}
+		 
+		List<LogTest> list = logTestService.findR("");
+		for(LogTest log:list){
+			System.out.println(log.getName());
+		}
+	}	
+	
+	
 	
 //	@Test
 //	public void tt(){

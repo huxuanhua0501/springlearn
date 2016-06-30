@@ -29,8 +29,7 @@
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
 	</bean>  
-	
-	
+	<mongo:repositories base-package="net.**.service" create-query-indexes="true" />
 	
 <!-- <mongo:mongo host="localhost" port="27017"/>
 

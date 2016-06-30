@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -16,15 +17,18 @@ import org.springframework.stereotype.Service;
 
 import net.spring.mongo.pojo.LogTest;
 import net.spring.mongo.service.ILogTestSerice;
+import net.spring.mongo.service.IRespositoryservice;
 
  
 
 @Service
-@Qualifier("logTestService")
 public class LogTestService implements ILogTestSerice {
 
 	@Resource
 	protected MongoTemplate mongoTemplate;
+	
+	@Autowired
+	IRespositoryservice respositoryservice;
 
 	@Override
 	public void saveLogTest(String testName) {
@@ -61,5 +65,11 @@ public class LogTestService implements ILogTestSerice {
 		query.addCriteria(Criteria.where("name").is("test"));
 		List<LogTest>list = mongoTemplate.find(query, LogTest.class);
 		return list.get(0);
+	}
+	
+	
+	public List<LogTest> findR(String name){
+//		return null;
+	 return	respositoryservice.findAll();
 	}
 }
